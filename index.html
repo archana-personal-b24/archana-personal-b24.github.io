@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EDIT: page metadata. Shows in the browser tab, Google results,
+         and link previews when someone shares your site.
+         ══════════════════════════════════════════════════════════════════ -->
+    <title>Archana Balasubramanian</title>
+    <meta
+      name="description"
+      content="[[One sentence, ~150 characters. What you do and who for. This is the text Google shows under your name.]]"
+    />
+    <meta name="author" content="Archana Balasubramanian" />
+
+    <!-- Social share preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Archana Balasubramanian" />
+    <meta property="og:description" content="[[Same one-liner as above.]]" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon: swap for assets/favicon.svg once you have one -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AC%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Fonts are self-hosted in assets/fonts/, with no third-party requests.
+         Preloading the two we use above the fold avoids a flash of fallback type. -->
+    <link
+      rel="preload"
+      href="assets/fonts/dmsans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/playfair-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Sets the saved theme before first paint so there is no flash of the
+         wrong color scheme. Keep this inline and keep it in <head>. -->
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        try {
+          var t = localStorage.getItem("theme");
+          if (t) document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Icon sprite. Referenced everywhere with <use href="#i-name">.
+         Add new icons here once, use them anywhere. -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58C20.57 22.29 24 17.79 24 12.5C24 5.87 18.63.5 12 .5z"
+        />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"
+        />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+        <path d="m3 6.5 9 6.5 9-6.5" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17 17 7M9 7h8v8" />
+      </symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+        <path d="M14 3v5h5M9 13h6M9 17h4" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="12" cy="12" r="4.2" />
+        <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </symbol>
+      <!-- Google Scholar mark -->
+      <symbol id="i-scholar" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 3 1 9l11 6 11-6-11-6z" />
+        <path d="M5.2 11.6v4.2c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-4.2L12 15.3 5.2 11.6z" />
+      </symbol>
+      <!-- ORCID iD mark -->
+      <symbol id="i-orcid" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="currentColor" />
+        <rect x="7.6" y="9.4" width="1.7" height="7.4" fill="var(--bg)" />
+        <circle cx="8.45" cy="7.45" r="1.05" fill="var(--bg)" />
+        <path
+          fill="var(--bg)"
+          fill-rule="evenodd"
+          d="M11.6 9.4h3.6a3.7 3.7 0 0 1 0 7.4h-3.6V9.4zm1.7 1.6v4.2h1.9a2.1 2.1 0 0 0 0-4.2h-1.9z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         NAVIGATION
+         Each link's href must match a section id further down. If you delete
+         a section, delete its nav link too.
+         ════════════════════════════════════════════════════════════════════ -->
+    <header class="topbar">
+      <a class="topbar__name" href="#about">Archana Balasubramanian</a>
+      <button
+        class="nav-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="sidenav"
+        aria-label="Open menu"
+      >
+        <svg><use href="#i-menu" /></svg>
+      </button>
+    </header>
+
+    <div class="shell">
+      <!-- ══════════════════════════════════════════════════════════════════
+           SIDEBAR NAVIGATION
+           Each link's href must match a section id below. Delete a section
+           and you must delete its link here too. The social block is pinned
+           to the bottom of the sidebar with margin-top:auto.
+           ══════════════════════════════════════════════════════════════════ -->
+      <nav class="sidenav" id="sidenav" aria-label="Sections">
+        <a class="sidenav__link" href="#about">About</a>
+        <a class="sidenav__link" href="#work">Work</a>
+        <a class="sidenav__link" href="#projects">Featured Project</a>
+        <a class="sidenav__link" href="#publications">Publications</a>
+        <a class="sidenav__link" href="#skills">Skills</a>
+        <a class="sidenav__link" href="#education">Education</a>
+        <a class="sidenav__link" href="#best-reads">Selected Reading</a>
+
+        <div class="sidenav__socials">
+          <a href="mailto:archanab2400@gmail.com">
+            <svg><use href="#i-mail" /></svg> Email
+          </a>
+          <a
+            href="https://www.linkedin.com/in/archanab2400/"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg><use href="#i-linkedin" /></svg> LinkedIn
+          </a>
+          <a
+            href="https://scholar.google.com/citations?user=X4-CQkYAAAAJ&amp;hl=en"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg><use href="#i-scholar" /></svg> Scholar
+          </a>
+          <a href="https://orcid.org/0000-0003-0036-0922" target="_blank" rel="noopener">
+            <svg><use href="#i-orcid" /></svg> ORCID
+          </a>
+          <!-- Add your GitHub URL, or delete this link -->
+          <a href="https://github.com/[[username]]" target="_blank" rel="noopener">
+            <svg><use href="#i-github" /></svg> GitHub
+          </a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun"><use href="#i-sun" /></svg>
+            <svg class="icon-moon"><use href="#i-moon" /></svg>
+            Theme
+          </button>
+        </div>
+      </nav>
+
+      <div class="content">
+
+    <main id="main">
+      <!-- ══════════════════════════════════════════════════════════════════
+           HERO. This doubles as the About section, which is why it carries
+           id="about" and there is no separate About block further down.
+
+           Your name is the headline. Nothing else on the page competes with it.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="hero" id="about">
+        <div class="wrap hero__grid">
+          <div class="hero__left">
+            <div>
+              <!-- Set in one weight and one color, broken across two lines.
+                   To accent part of it later, wrap that fragment in <em> and
+                   uncomment the .hero__name em rule in styles.css.          -->
+              <h1 class="hero__name">Archana<br />Balasubramanian</h1>
+
+              <p class="hero__tag">Turning biological data into clear visuals and reliable systems.</p>
+            </div>
+
+            <div class="hero__bio">
+              <!-- Two short paragraphs: visual communication and the systems
+                   that carry scientific data securely from lab to decision. -->
+              <p class="hero__desc">
+                Hi, I’m Archana, a bioinformatician who loves working on both sides of
+                the stack! On the frontend, I believe biological data deserves to be
+                seen, not buried in an abstract, paper or codebase. This portfolio is
+                where I bring my projects to life and ask a simple question: can a
+                thoughtful visualization tell the story first?
+              </p>
+              <p class="hero__desc">
+                On the backend, I build the architecture that makes those insights
+                secure, reliable and ready to scale. I love figuring out which systems
+                fit the data, automating the journey from wet lab output through quality
+                control and catching weak points before they become bottlenecks. I do my
+                best work where science, software and delivery meet, translating
+                stakeholder needs into clear priorities, coordinating projects across
+                teams and building systems that let people view, validate and trust their
+                data before it informs scientific, operational and public health decisions.
+              </p>
+
+              <div class="hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://www.linkedin.com/in/archanab2400/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Connect on LinkedIn
+                </a>
+                <a class="btn btn--ghost" href="mailto:archanab2400@gmail.com">
+                  Email
+                  <svg><use href="#i-arrow" /></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tall black-and-white portrait. The grayscale filter lives in
+               styles.css (.hero__photo img). Delete that line for color. -->
+          <figure class="hero__photo">
+            <img
+              src="assets/photo.jpg"
+              alt="Portrait of Archana Balasubramanian"
+              width="726"
+              height="726"
+              loading="eager"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           01 · WORK
+           To add a role: copy one <li class="entry"> block and edit it.
+           Newest first. Logos: square PNG/SVG in assets/logos/. If the file
+           is missing, the data-monogram letters show instead.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section section--flush" id="work">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">01</span>
+            <h2 class="section__title">Work</h2>
+          </div>
+
+          <ul class="entries">
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/zymo.svg" alt="" data-monogram="ZYMO" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">Bioinformatics Associate I</h3>
+                <p class="entry__org">Zymo Research Corporation · Irvine, CA · Full-time</p>
+                <div class="entry__body">
+                  <p>At Zymo, I own bioinformatics projects and carry data from raw assays through validated analysis, secure deployment and stakeholder delivery.</p>
+                  <ul class="entry__bullets">
+                    <li><strong>Wastewater surveillance.</strong> Own the analysis and delivery path for the Los Angeles County Department of Public Health across targeted viral sequencing, metagenomics and multiplex PCR data for pathogen surveillance. I build decision-ready dashboards that help public-health officials make data-informed decisions about pathogens. I implement dataset-grounded chatbot interfaces in these dashboards so users can explore results while calculations remain tied to validated analysis functions.</li>
+                    <li><strong><a href="https://pangealab.com/bladder-care/" target="_blank" rel="noopener">Bladder CARE</a>.</strong> Developed and released the latest version of the software behind a non-invasive urine test for the early detection of bladder cancer and upper tract urothelial carcinoma, now in clinical use and recognized with FDA Breakthrough Device Designation.</li>
+                    <li><strong>Methylation platform.</strong> Rebuilt a legacy production methylation workflow as a modular, containerized Nextflow pipeline validated for WGBS, RRBS and cfWGBS, establishing it as the default workflow while reducing technical debt.</li>
+                    <li><strong>Bioinformatics AI adoption.</strong> Led a company-wide demo of Claude Code, Codex and reusable skills through real bioinformatics use cases, practical failure modes and deliberately good and bad examples.</li>
+                    <li><strong>Multi-omics analysis.</strong> I integrate proteomic, transcriptomic and methylation data to evaluate whether biological signals converge across molecular layers or remain assay-specific. I turn those comparisons into an interpretable view of pathways and disease mechanisms that guides focused follow-up analysis.</li>
+                    <li><strong>Sequencing platform breadth.</strong> I work with data generated across Element AVITI, Illumina, PacBio and Oxford Nanopore platforms. That range has taught me to adapt quality control and downstream analysis to the assay and biological question instead of forcing every dataset through the same template.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="entry__when">Oct 2024-present</p>
+            </li>
+
+            <!-- ── copy from here ────────────────────────────────────────── -->
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/janssen.png" alt="" data-monogram="J&amp;J" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">Toxicology Data Scientist Intern</h3>
+                <p class="entry__org">Janssen, Pharmaceutical Companies of Johnson &amp; Johnson · San Diego, CA · Internship</p>
+                <div class="entry__body">
+                  <p>Investigated why schizophrenia therapeutics can produce metabolic side effects and how transcriptomic data could help the safety team detect those signals earlier.</p>
+                  <ul class="entry__bullets">
+                    <li>Analyzed bulk RNA-seq data from treated preclinical models to identify obesity-related expression changes and prioritize candidate biomarkers for safety assessment.</li>
+                    <li>Connected differential-expression results to affected pathways and translated the findings into focused biological questions for wet-lab follow-up.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="entry__when">Jul-Sep 2023</p>
+            </li>
+            <!-- ── to here ───────────────────────────────────────────────── -->
+
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/ucsd.svg" alt="" data-monogram="SBRG" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">Graduate Student Researcher, Palsson Lab</h3>
+                <p class="entry__org">Systems Biology Research Group, UC San Diego · San Diego, CA · Palsson Lab</p>
+                <div class="entry__body">
+                  <p>Two projects shaped my research in the Palsson Lab: mapping pathogen diversity across thousands of genomes and resolving the regulatory programs that drive bacterial adaptation across changing environments.</p>
+                  <ul class="entry__bullets">
+                    <li><strong><a href="#kp-thesis"><em>Klebsiella pneumoniae</em> pangenomics.</a></strong> Built a quality-controlled map of 7,100 genomes that connected population structure to resistance, virulence and strain-specific metabolic capabilities. Click the title to explore the thesis and visualization.</li>
+                    <li><strong><a href="#lreuteri-ica"><em>L. reuteri</em> transcriptional regulation.</a></strong> Used independent component analysis to resolve 117 RNA-seq datasets into 35 independently regulated gene programs, revealing how this probiotic bacterium adapts its metabolism and stress responses across 50 experimental conditions and providing a framework for experimental validation and strain design. Click the title to explore the peer-reviewed study and visualization.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="entry__when">Sep 2022-May 2024</p>
+            </li>
+
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/iitb.png" alt="" data-monogram="IITB" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">Computational Biology Research Intern</h3>
+                <p class="entry__org">Indian Institute of Technology Bombay, Mumbai, India, Research</p>
+                <div class="entry__body">
+                  <p>Examined patient-tissue proteomics to understand how glioma changes with increasing aggressiveness and identify therapeutically relevant signals.</p>
+                  <ul class="entry__bullets">
+                    <li>Applied pathway enrichment to turn altered proteins into a focused set of biological processes and candidate targets linked to tumor progression.</li>
+                    <li>Evaluated candidates through molecular docking, simulation and drug-likeness testing, narrowing the list to biologically relevant targets with practical potential for further investigation.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="entry__when">May-Dec 2021</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           02 · FEATURED PROJECT
+           Previous cards are parked in projects-removed-backup.html at the
+           root of this folder if you want any of them back. Copy an existing
+           <article class="card"> block when adding another project.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section" id="projects">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">02</span>
+            <h2 class="section__title">Featured Project</h2>
+          </div>
+
+          <div class="grid-cards">
+            <!-- ── copy one card block to add another ──────────────────── -->
+            <article class="card reveal card--visual">
+              <div class="card__head">
+                <h3 class="card__title">Mapping squamous lung cancer progression across cells and tissue</h3>
+                <span class="card__when">2024</span>
+              </div>
+              <div class="card__body card__body--visual">
+                <div class="card__copy">
+              <p class="card__desc">
+                I led a team investigating how immune, epithelial and stromal populations
+                change and interact across squamous cell lung carcinoma progression. We
+                combined single-cell resolution with spatial context to move beyond cataloging
+                cell types and map their organization within tumor tissue.
+              </p>
+              <p class="card__desc">
+                The resulting analysis connected cell-state transitions, inflammatory pathways
+                and candidate signaling relationships to their spatial context, providing a more
+                complete view of the tumor ecosystem across disease progression.
+              </p>
+              <ul class="tags">
+                <li>scRNA-seq</li>
+                <li>Spatial transcriptomics</li>
+                <li>Scanpy · Squidpy</li>
+                <li>Scanorama</li>
+                <li>LIANA</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/archana-b24/sc-spatial-analysis" target="_blank" rel="noopener">
+                  <svg><use href="#i-github" /></svg> Code
+                </a>
+              </div>
+                </div>
+                <figure class="lung-spatial" data-lung-spatial>
+                  <div class="figure-insight">
+                    <div class="figure-insight__item">
+                      <span class="figure-insight__label">Approach</span>
+                      <p>We quality-controlled 18,381 tumor single-cell profiles and 3,858 Visium spots, aligned them across 1,432 shared genes and transferred cell-type annotations into tissue space. Trajectory, pathway and ligand-receptor analyses then characterized cell-state changes and candidate communication.</p>
+                    </div>
+                    <div class="figure-insight__item">
+                      <span class="figure-insight__label">Rationale</span>
+                      <p>Single-cell data resolves cell identities but loses tissue position; Visium retains spatial context but captures mixed signals. Integrating them makes inferred neighborhoods and communication more biologically grounded.</p>
+                    </div>
+                  </div>
+                  <div class="lung-spatial__head">
+                    <span class="lung-spatial__state">Hypothesis: integrating single-cell and spatial data can recover how tumor cell populations are organized and interact</span>
+                    <button class="lung-spatial__toggle" type="button" aria-label="Pause spatial integration animation" aria-pressed="false">Pause</button>
+                  </div>
+                  <div class="lung-spatial__canvas"></div>
+                  <figcaption>
+                    The figure follows the workflow from complementary single-cell and spatial
+                    inputs through label transfer to spatial analysis of tumor-associated
+                    populations. The cells, spots and expression matrix are schematic, and the
+                    motion represents the analytical workflow rather than cell movement. Inferred
+                    signaling relationships remain hypotheses for experimental validation.
+                  </figcaption>
+                </figure>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           03 · PUBLICATIONS & PRESENTATIONS
+
+           To add an entry: copy one <li class="pub"> block. The numbers are
+           generated by CSS, so you never renumber anything by hand. Insert an
+           item anywhere and the sequence corrects itself.
+
+           Order within each list: newest first.
+           Wrap YOUR name in <strong> in the author line so it stands out.
+           Delete any <h3 class="subhead"> group you don't need.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section" id="publications">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">03</span>
+            <h2 class="section__title">Publications &amp; presentations</h2>
+            <p class="section__note">
+              <a href="https://scholar.google.com/citations?user=X4-CQkYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                Google Scholar
+              </a>
+            </p>
+          </div>
+
+          <h3 class="subhead">Master's thesis</h3>
+          <ol class="pubs">
+            <li class="pub reveal" id="kp-thesis">
+              <div>
+                <h4 class="pub__title">
+                  <a
+                    href="https://escholarship.org/uc/item/8gg807s6"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    A pangenomics-enriched analysis of <em>Klebsiella pneumoniae</em>
+                  </a>
+                </h4>
+                <p class="pub__authors"><strong>Balasubramanian A</strong></p>
+                <p class="pub__venue">
+                  M.S. thesis · University of California San Diego
+                </p>
+                <div class="pub__body pub__body--visual">
+                  <div>
+                <div class="pub__desc">
+                  <p>
+                    <em>Klebsiella pneumoniae</em> (Kp) is a highly diverse opportunistic bacterium that causes serious respiratory, bloodstream, and urinary-tract infections, many of which are becoming increasingly difficult to treat as strains acquire and exchange antibiotic-resistance genes. Because no single reference genome captures this diversity, the pangenome provides a broader view of the species by revealing both the genes shared across strains and those associated with resistance, virulence, and adaptation.
+                  </p>
+                  <p>
+                    Using more than 7,000 quality-controlled genomes, I mapped whole-genome similarity into 26 population groups and interpreted these groups alongside their resistance, virulence, capsule, and surface-antigen profiles. To uncover the genetic structure underlying these groups, the analysis represented each genome as a gene presence-or-absence profile and applied non-negative matrix factorization, a mathematical method that separates recurring sets of genes and measures how strongly each set is represented in an individual strain.
+                  </p>
+                  <p>
+                    This model goes beyond the population level by giving each group an interpretable genetic signature, revealing which recurring genes define established lineages and which mobile-element-rich modules may contribute to their adaptability. Combined with strain-specific metabolic modeling, this framework moves beyond simply classifying Kp toward explaining the genes and biological capabilities that distinguish its lineages, providing focused hypotheses for resistance surveillance and future experimental validation of therapeutic vulnerabilities.
+                  </p>
+                </div>
+                <p class="pub__meta">
+                  <span class="pub__type">Thesis</span>
+                  <span>2024</span>
+                  <a
+                    href="https://escholarship.org/uc/item/8gg807s6"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    eScholarship <svg><use href="#i-arrow" /></svg>
+                  </a>
+                </p>
+                  </div>
+                  <figure class="kp-factorization" data-kp-factorization>
+                    <div class="kp-factorization__head">
+                      <span class="kp-factorization__state">Hypothesis: pangenome-wide gene modules can explain the resistance, virulence and adaptation that distinguish Kp lineages</span>
+                      <button class="kp-factorization__toggle" type="button" aria-label="Pause genome comparison animation" aria-pressed="false">Pause</button>
+                    </div>
+                    <div class="kp-factorization__canvas"></div>
+                    <figcaption>
+                      A single reference genome cannot capture the genetic diversity of
+                      <em>Klebsiella pneumoniae</em> or explain why its lineages differ in resistance,
+                      virulence and adaptation. The thesis tested whether recurring modules within
+                      the species pangenome could resolve that population structure and connect each
+                      lineage to an interpretable biological signature. Across more than 7,000
+                      genomes, the analysis identified 26 population groups and the gene combinations
+                      that define them, turning genome classification into focused hypotheses for
+                      surveillance and experimental validation. The strains and groups shown here are
+                      schematic representations of the thesis results.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead">Peer-reviewed</h3>
+          <ol class="pubs">
+            <li class="pub reveal" id="lreuteri-ica">
+              <div>
+                <h4 class="pub__title">
+                  <a
+                    href="https://journals.asm.org/doi/10.1128/msystems.01257-23"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Reconstructing the transcriptional regulatory network of probiotic
+                    <em>L. reuteri</em> is enabled by transcriptomics and machine learning
+                  </a>
+                </h4>
+                <p class="pub__authors pub__authors--single-line">
+                  Josephs-Spaulding J, Rajput A, Hefner Y, Szubin R,
+                  <strong>Balasubramanian A</strong>, Li G, Zielinski DC,
+                  Jahn L, Sommer M, Phaneuf P, Palsson BO
+                </p>
+                <p class="pub__venue">mSystems 9, e01257-23</p>
+                <div class="pub__body pub__body--visual">
+                  <div>
+                <div class="pub__desc">
+                  <p>
+                    <em>Limosilactobacillus reuteri</em> is a probiotic bacterium with important roles in human health and microbial food production, yet the regulatory logic that allows it to respond to different environments remained poorly resolved. Because a single growth condition captures only a narrow view of gene activity, a broader transcriptional compendium was needed to understand which genes respond together and how those responses change across environments.
+                  </p>
+                  <p>
+                    Using 117 quality-controlled RNA-seq profiles spanning 50 conditions, the analysis measured transcript abundance across changes in nutrients, salts, human milk, fruit juice, microbial co-cultures and environmental stress. Independent component analysis separated these overlapping expression patterns into 35 independently regulated gene groups called iModulons, then measured the activity of each group in every condition. This turns thousands of individual expression measurements into a smaller set of coordinated biological signals that can be interpreted across experiments.
+                  </p>
+                  <p>
+                    The resulting network revealed regulatory responses involving arginine metabolism, stress, riboflavin production, fatty-acid conversion and secondary-metabolite biosynthesis. Rather than describing gene expression one condition at a time, this framework explains how <em>L. reuteri</em> reorganizes its activity across environments and which regulatory programs are most closely tied to useful probiotic functions. It provides a practical foundation for experimental validation, strain design and the more predictable use of microbes in food production.
+                  </p>
+                </div>
+                <p class="pub__meta">
+                  <span class="pub__type">Article</span>
+                  <span>2024</span>
+                  <a
+                    href="https://doi.org/10.1128/msystems.01257-23"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    DOI <svg><use href="#i-arrow" /></svg>
+                  </a>
+                  <a
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10949432/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg><use href="#i-doc" /></svg> Full text
+                  </a>
+                </p>
+                  </div>
+                  <figure class="lacto-workflow" data-lacto-workflow>
+                    <div class="lacto-workflow__head">
+                      <span class="lacto-workflow__state">Diverse growth conditions</span>
+                      <button class="lacto-workflow__toggle" type="button" aria-label="Pause workflow animation" aria-pressed="false">Pause</button>
+                    </div>
+                    <div class="lacto-workflow__canvas"></div>
+                    <figcaption>
+                      LactoPRECISE converts environmental variation into an interpretable
+                      regulatory map. Independent component analysis
+                      separates expression measured in 117 RNA-seq samples across 50
+                      conditions into 35 independently regulated gene groups called
+                      iModulons. Comparing iModulon activity across conditions reveals
+                      media-specific regulation, context-dependent gene expression,
+                      probiotic secondary-metabolite pathways and opportunities for strain
+                      design. The motion illustrates the analytical workflow, not real-time
+                      cellular dynamics.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  <a href="https://elifesciences.org/articles/76535" target="_blank" rel="noopener">
+                    Landscape of epithelial–mesenchymal plasticity as an emergent property
+                    of coordinated teams in regulatory networks
+                  </a>
+                </h4>
+                <p class="pub__authors">
+                  Hari K, Ullanat V, <strong>Balasubramanian A</strong>, Gopalan A, Jolly MK
+                </p>
+                <p class="pub__venue">eLife 11, e76535</p>
+                <div class="pub__body pub__body--visual">
+                  <div>
+                <div class="pub__desc">
+                  <p>
+                    Cells can shift between epithelial and mesenchymal identities as they respond to developmental and environmental signals. This plasticity is essential for normal processes such as tissue repair, yet in cancer it can support invasion, metastasis and treatment resistance. The central question was why regulatory networks containing dozens of interacting genes repeatedly produce only a small number of stable cell states.
+                  </p>
+                  <p>
+                    Across five epithelial-mesenchymal plasticity networks, the analysis represented genes and microRNAs as nodes connected by directed activating or inhibitory interactions. Boolean models identified the stable states permitted by each network, while Random Circuit Perturbation (RACIPE) simulations tested thousands of possible interaction strengths to determine which states consistently emerged. Repeating the analysis after rewiring the networks separated behavior encoded by their biological organization from behavior that could arise by chance.
+                  </p>
+                  <p>
+                    The networks consistently organized into two coordinated teams: epithelial regulators supported one another, mesenchymal regulators did the same and each team opposed the other. This creates a molecular tug-of-war that draws cells toward stable epithelial or mesenchymal identities while allowing less stable hybrid states to emerge between them. The strength of this team structure predicted how stable each state would be, showing that network wiring already contains information about the cell behaviors it can produce. This framework provides an intuitive way to study cancer cell plasticity and prioritize regulatory relationships for experimental testing.
+                  </p>
+                </div>
+                <p class="pub__meta">
+                  <span class="pub__type">Article</span>
+                  <span>2022</span>
+                  <a href="https://doi.org/10.7554/eLife.76535" target="_blank" rel="noopener">
+                    DOI <svg><use href="#i-arrow" /></svg>
+                  </a>
+                  <a
+                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9683792/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg><use href="#i-doc" /></svg> Full text
+                  </a>
+                </p>
+                  </div>
+                  <figure class="emp-network" data-emp-network>
+                    <div class="emp-network__head">
+                      <span class="emp-network__state">Hybrid balance</span>
+                      <button class="emp-network__toggle" type="button" aria-label="Pause network animation" aria-pressed="false">Pause</button>
+                    </div>
+                    <div class="emp-network__canvas"></div>
+                    <figcaption>
+                      The network shows how 22 regulators and 82 directed interactions
+                      organize into opposing epithelial and mesenchymal teams. Activation
+                      within a team and inhibition across teams create a regulatory
+                      tug-of-war that can stabilize epithelial, mesenchymal or intermediate
+                      hybrid states. The moving paths illustrate changing signal emphasis
+                      and direction, not a live RACIPE (Random Circuit Perturbation)
+                      simulation.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  <a
+                    href="https://iubmb.onlinelibrary.wiley.com/doi/10.1002/bmb.21605"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Bioinformatics approach used in undergraduate research to predict siRNA
+                    as ZIKV therapeutics
+                  </a>
+                </h4>
+                <p class="pub__authors">
+                  <strong>Balasubramanian A</strong>, Chatterjee J
+                </p>
+                <p class="pub__venue">
+                  Biochemistry and Molecular Biology Education 50(2), 237–245
+                </p>
+                <div class="pub__body pub__body--visual">
+                  <div>
+                <div class="pub__desc">
+                  <p>
+                    Zika virus (ZIKV) can cause severe neurological complications
+                    including congenital abnormalities, yet no ZIKV-specific antiviral
+                    treatment was available when this work was developed. Small
+                    interfering RNAs (siRNAs) offer a targeted strategy: a short RNA
+                    sequence can be designed to recognize a complementary region of the
+                    viral genome and direct its silencing. The central challenge is
+                    identifying viral regions that are conserved enough to remain useful
+                    across strains while producing candidates with strong predicted
+                    specificity and activity.
+                  </p>
+                  <p>
+                    Using a workflow built entirely from open-source databases, servers
+                    and bioinformatics tools, the analysis compared ZIKV sequences,
+                    identified conserved regions and designed candidate siRNAs against
+                    those targets. Sequence-based screening then reduced these candidates
+                    according to their predicted effectiveness and specificity. The
+                    workflow was documented step by step so that an undergraduate with
+                    limited prior bioinformatics experience could reproduce or adapt the
+                    analysis on a standard computer.
+                  </p>
+                  <p>
+                    This work produced computational candidates rather than a validated
+                    treatment, but its value extends beyond the predictions themselves.
+                    It demonstrates how an authentic antiviral-design problem can be
+                    investigated without proprietary software or specialized
+                    infrastructure including in remote learning settings. The result is
+                    both a starting point for laboratory validation and a reusable
+                    framework for teaching how sequence analysis can move from a viral
+                    genome toward a testable therapeutic hypothesis.
+                  </p>
+                </div>
+                <p class="pub__meta">
+                  <span class="pub__type">Article</span>
+                  <span class="pub__flag">First author</span>
+                  <span>2022</span>
+                  <a href="https://doi.org/10.1002/bmb.21605" target="_blank" rel="noopener">
+                    DOI <svg><use href="#i-arrow" /></svg>
+                  </a>
+                </p>
+                  </div>
+                  <figure class="zikv-sirna" data-zikv-sirna>
+                    <div class="zikv-sirna__head">
+                      <span class="zikv-sirna__state">Hypothesis: conserved ZIKV sequences can yield siRNA candidates that remain relevant across viral strains</span>
+                      <button class="zikv-sirna__toggle" type="button" aria-label="Pause siRNA design animation" aria-pressed="false">Pause</button>
+                    </div>
+                    <div class="zikv-sirna__canvas"></div>
+                    <figcaption>
+                      ZIKV lacks a virus-specific antiviral treatment, and sequence variation can
+                      make a therapy designed against one strain less useful against another. This
+                      project tests whether regions conserved across ZIKV genomes can provide stable
+                      targets for small interfering RNAs designed to direct viral RNA silencing.
+                      Candidate siRNAs are screened computationally for predicted activity and
+                      specificity, producing a reproducible shortlist for laboratory validation. The
+                      RISC binding and cleavage shown here illustrate the therapeutic hypothesis, not
+                      experimentally demonstrated efficacy.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  <a
+                    href="https://link.springer.com/article/10.1186/s43088-021-00145-4"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Investigating drug–target interactions in frontotemporal dementia using
+                    a network pharmacology approach
+                  </a>
+                </h4>
+                <p class="pub__authors">
+                  <strong>Balasubramanian A</strong>, Sudarshan R, Chatterjee J
+                </p>
+                <p class="pub__venue">
+                  Beni-Suef University Journal of Basic and Applied Sciences
+                </p>
+                <div class="pub__body pub__body--visual">
+                  <div>
+                <div class="pub__desc">
+                  <p>
+                    Frontotemporal dementia (FTD) is the second most common dementia in
+                    people younger than 65 and currently has no cure. Treatment therefore
+                    relies on combinations of drugs that manage behavioral and cognitive
+                    symptoms, but the same drugs can act on multiple genes and tissues or
+                    interact adversely with one another. A network view was needed to
+                    understand these relationships together rather than evaluating each
+                    drug and target in isolation.
+                  </p>
+                  <p>
+                    Using 55 FTD-related drugs, 87 drug targets and seven
+                    disease-susceptibility genes, the analysis constructed protein–protein,
+                    drug–gene and drug–drug interaction networks and interpreted them
+                    alongside enriched pathways and tissue-specific activity. Network
+                    centrality measured which genes or drugs connected otherwise separate
+                    parts of the system, while historeceptomics linked drug targets to the
+                    tissues in which they are expressed. This made it possible to
+                    distinguish influential biological hubs from drugs whose many
+                    connections may also indicate a greater potential for off-target or
+                    combination effects.
+                  </p>
+                  <p>
+                    The protein network contained 404 observed interactions compared with
+                    55 expected by chance and identified APP as its most connected bridge
+                    between FTD-susceptibility genes and neuroactive receptors. Memantine
+                    and quetiapine emerged as major drug–gene hubs, while the drug–drug
+                    network highlighted highly connected medications that warrant
+                    particular attention when used in combination. These findings do not
+                    prescribe a treatment; they provide a structured basis for medication
+                    management, experimental follow-up and future precision-therapy studies
+                    that account for both disease biology and polypharmacy.
+                  </p>
+                </div>
+                <p class="pub__meta">
+                  <span class="pub__type">Article</span>
+                  <span class="pub__flag">First author</span>
+                  <span>2021</span>
+                  <a
+                    href="https://doi.org/10.1186/s43088-021-00145-4"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    DOI <svg><use href="#i-arrow" /></svg>
+                  </a>
+                </p>
+                  </div>
+                  <figure class="ftd-network" data-ftd-network>
+                    <div class="ftd-network__head">
+                      <span class="ftd-network__state">Hypothesis: connecting FTD genes, drug targets and medications can reveal therapeutic priorities and polypharmacy risks hidden by one-drug-at-a-time analysis</span>
+                      <button class="ftd-network__toggle" type="button" aria-label="Pause FTD network animation" aria-pressed="false">Pause</button>
+                    </div>
+                    <div class="ftd-network__canvas"></div>
+                    <figcaption>
+                      FTD has no cure, so treatment often combines medications that manage symptoms
+                      but may act on many targets, tissues and one another. This project tests whether
+                      a network connecting seven FTD-susceptibility genes, 87 drug targets and 55
+                      medications can reveal influential biological hubs and potentially important
+                      drug combinations that isolated analyses miss. APP emerged as a major
+                      biological bridge, while memantine and quetiapine were highly connected
+                      drug–gene hubs; tissue and drug–drug context then helped separate experimental
+                      priorities from combinations warranting caution. The findings support follow-up
+                      and medication review, not treatment recommendations.
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead">Conference presentations</h3>
+          <ol class="pubs">
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  <a href="https://www.wastewateramr.com/" target="_blank" rel="noopener">
+                    An end-to-end wastewater pathogen surveillance data dashboard platform
+                  </a>
+                </h4>
+                <p class="pub__authors">
+                  <strong>Balasubramanian A</strong>, Bhasin J, Yancey R, Jin M, Damerum A,
+                  Ullmer W, Goldstein J, Chen E, Booher K, Jia L
+                </p>
+                <p class="pub__venue">
+                  Microbes in Wastewater Symposium · Newport Beach, CA
+                </p>
+                <p class="pub__desc">
+                  Wastewater can show how pathogens are changing across a community, but
+                  sequencing results only matter if public health teams can actually use them.
+                  I helped build an end-to-end platform that connects sample processing,
+                  pathogen and variant analysis, quality control and dashboard delivery, with
+                  results organized by treatment plant and time. Teams can quickly see what is
+                  increasing, compare sites and trace every signal back to the underlying data.
+                </p>
+                <p class="pub__meta">
+                  <span class="pub__type">Poster</span>
+                  <span class="pub__flag">First author</span>
+                  <span>January 2026</span>
+                  <a href="https://www.wastewateramr.com/" target="_blank" rel="noopener">
+                    Conference <svg><use href="#i-arrow" /></svg>
+                  </a>
+                </p>
+              </div>
+              <figure class="pub__figure">
+                <a
+                  href="assets/pubs/wastewater-surveillance-poster.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/pubs/wastewater-surveillance-poster-thumb.jpg"
+                    alt="Archana Balasubramanian presenting the wastewater pathogen surveillance dashboard poster"
+                    width="336"
+                    height="252"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Microbes in Wastewater, 2026</figcaption>
+              </figure>
+            </li>
+
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  A pangenome-enriched analysis of <em>Klebsiella pneumoniae</em>
+                </h4>
+                <p class="pub__authors">
+                  <strong>Balasubramanian A</strong>, Chauhan S, Monk J · PI: Palsson BO
+                </p>
+                <p class="pub__venue">
+                  Research Expo, Jacobs School of Engineering, UC San Diego · La Jolla, CA
+                </p>
+                <p class="pub__desc">
+                  <em>Klebsiella pneumoniae</em> is far too diverse to understand through a
+                  single reference genome. I analyzed more than 7,000 quality-controlled
+                  genomes and organized them into 26 population groups, then compared their
+                  resistance, virulence, capsule and surface-antigen profiles. The result was
+                  a clearer view of what the species shares, what makes each lineage different
+                  and where surveillance or experimental follow-up should focus next.
+                </p>
+                <p class="pub__meta">
+                  <span class="pub__type">Poster</span>
+                  <span class="pub__flag">First author</span>
+                  <span>2024</span>
+                </p>
+              </div>
+              <figure class="pub__figure">
+                <a
+                  href="assets/pubs/klebsiella-pangenome-poster.jpg"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="assets/pubs/klebsiella-pangenome-poster-thumb.jpg"
+                    alt="Archana Balasubramanian beside the Klebsiella pangenome poster at UC San Diego Research Expo"
+                    width="336"
+                    height="252"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>Research Expo, 2024</figcaption>
+              </figure>
+            </li>
+
+            <li class="pub reveal">
+              <div>
+                <h4 class="pub__title">
+                  <a
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3529345"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Targeted gene therapy against Zika virus: a bioinformatics approach
+                  </a>
+                </h4>
+                <p class="pub__authors">
+                  <strong>Balasubramanian A</strong>, Chatterjee J
+                </p>
+                <p class="pub__venue">
+                  International Conference on Drug Discovery (ICDD 2020) · Hyderabad, India
+                </p>
+                <p class="pub__desc">
+                  For this undergraduate project, I used open-source bioinformatics tools to
+                  find conserved regions in the Zika virus genome and design small interfering
+                  RNA candidates against them. Computational screening narrowed the designs by
+                  predicted activity and specificity, producing a focused set of candidates for
+                  laboratory validation rather than claiming a finished therapy. It was my
+                  first real look at how sequence analysis can turn a viral genome into a
+                  testable therapeutic idea, and the work later became the peer-reviewed study
+                  above.
+                </p>
+                <p class="pub__meta">
+                  <span class="pub__type">Poster</span>
+                  <span class="pub__flag">First author</span>
+                  <span>February 2020</span>
+                  <a
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3529345"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <svg><use href="#i-doc" /></svg> Abstract (SSRN)
+                  </a>
+                </p>
+              </div>
+              <figure class="pub__figure">
+                <a href="assets/pubs/zika-sirna-poster.jpg" target="_blank" rel="noopener">
+                  <img
+                    src="assets/pubs/zika-sirna-poster-thumb.jpg"
+                    alt="Archana Balasubramanian discussing the Zika siRNA poster at ICDD 2020"
+                    width="336"
+                    height="252"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>ICDD, 2020</figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           04 · SKILLS
+           Group by what the tool is for, not by language. Add or remove
+           groups freely. The grid reflows on its own.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section" id="skills">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">04</span>
+            <h2 class="section__title">Skills</h2>
+          </div>
+
+          <div class="skills reveal">
+            <div class="skills__group">
+              <h3>Languages</h3>
+              <ul class="tags">
+                <li>Python</li>
+                <li>R</li>
+                <li>SQL</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+            <div class="skills__group">
+              <h3>Omics &amp; genomics</h3>
+              <ul class="tags">
+                <li>Bulk RNA-seq</li>
+                <li>Single-cell RNA-seq</li>
+                <li>Spatial transcriptomics</li>
+                <li>DNA methylation · RRBS, WGBS, cfWGBS</li>
+                <li>Proteomics</li>
+                <li>Pangenomics &amp; pathogen genomics</li>
+              </ul>
+            </div>
+            <div class="skills__group">
+              <h3>Workflows &amp; data products</h3>
+              <ul class="tags">
+                <li>Nextflow</li>
+                <li>Shiny</li>
+                <li>ShinyProxy</li>
+                <li>Interactive visualization</li>
+                <li>DuckDB</li>
+                <li>SQLite</li>
+              </ul>
+            </div>
+            <div class="skills__group">
+              <h3>Infrastructure</h3>
+              <ul class="tags">
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>Ansible</li>
+                <li>Linux</li>
+                <li>Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           05 · EDUCATION
+           Same block structure as Work.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section" id="education">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">05</span>
+            <h2 class="section__title">Education</h2>
+          </div>
+
+          <ul class="entries">
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/ucsd.svg" alt="" data-monogram="UCSD" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">M.S. Bioengineering</h3>
+                <p class="entry__org">
+                  University of California San Diego · La Jolla, CA
+                </p>
+                <div class="entry__body">
+                  <p>
+                    <span class="entry__summary-line">Specialization in Computational Biology and Bioinformatics.</span>
+                    <span class="entry__summary-line">Thesis: <em>A pangenomics-enriched analysis of Klebsiella pneumoniae</em>
+                      (<a href="https://systemsbiology.ucsd.edu/" target="_blank" rel="noopener">Systems Biology Research Group</a>, Palsson Lab).</span>
+                  </p>
+                  <a class="btn btn--ghost entry__cta" href="#kp-thesis">
+                    Click here to explore the thesis
+                    <svg><use href="#i-arrow" /></svg>
+                  </a>
+                  <ul class="entry__bullets entry__bullets--plain">
+                    <li>
+                      Served as a Graduate Teaching Assistant where I hosted weekly
+                      discussion sections, conducted lab sessions and graded final projects.
+                    </li>
+                  </ul>
+                  <ul class="tags">
+                    <li>BENG 1 · Introduction to Bioengineering</li>
+                    <li>BENG 120 · Organic Chemistry</li>
+                    <li>BENG 123 · Dynamic Simulations</li>
+                    <li>BENG 160 · Molecular Bioengineering Techniques</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="entry__meta">
+                <p class="entry__when">2022–2024</p>
+                <span>GPA: 3.87/4.00</span>
+              </div>
+            </li>
+
+            <li class="entry reveal">
+              <span class="entry__logo">
+                <img src="assets/logos/pes.png" alt="" data-monogram="PES" />
+              </span>
+              <div class="entry__main">
+                <h3 class="entry__role">B.Tech Biotechnology</h3>
+                <p class="entry__org">PES University · Bengaluru, India</p>
+                <div class="entry__body">
+                  <p>
+                    Specialization in Process Engineering and Computational
+                    Biology.
+                  </p>
+                  <ul class="entry__bullets entry__bullets--plain">
+                    <li>
+                      Served as Secretary of Jeeva Srujana, PES University’s
+                      biotechnology club, from 2020 to 2022.
+                    </li>
+                    <li>
+                      Served as the Subject Matter Expert at PESU I/O, a peer-to-peer
+                      learning initiative, for <em>From Prognosis to Diagnosis Using
+                      Photoacoustic Imaging</em> in 2020 and returned as a Technical
+                      Consultant in 2021.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="entry__meta">
+                <p class="entry__when">2018–2022</p>
+                <span>GPA: 9.58/10.00</span>
+                <span>Silver Medalist</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           06 · SELECTED READING
+           Add saved articles to the matching category in content.js.
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="section" id="best-reads">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">06</span>
+            <h2 class="section__title">Selected Reading</h2>
+            <p class="section__note">Ideas shaping how I build, communicate and scale scientific data products</p>
+          </div>
+
+          <div class="reading-categories">
+            <article class="reading-category reveal">
+              <h3>Product Thinking, BI &amp; Communication</h3>
+              <p>How to turn analysis into a focused story, a useful dashboard and a decision people can act on.</p>
+              <ul class="reading-list">
+                <li><a href="https://www.nature.com/articles/s41568-026-00954-8" target="_blank" rel="noopener"><span>How to Give a Bad Talk</span><svg><use href="#i-arrow" /></svg></a></li>
+                <li><a href="https://medium.com/qonto-way/building-dashboards-like-a-product-lessons-from-design-growth-and-product-management-17b90113a39b" target="_blank" rel="noopener"><span>Building Dashboards Like a Product</span><svg><use href="#i-arrow" /></svg></a></li>
+                <li><a href="https://medium.com/design-bootcamp/nobody-wants-a-dashboard-they-want-a-story-728be510f7c2" target="_blank" rel="noopener"><span>Nobody Wants a Dashboard — They Want a Story</span><svg><use href="#i-arrow" /></svg></a></li>
+                <li><a href="https://marktossell.com/2026/06/12/dashboards-arent-dead-they-arent-even-sick/" target="_blank" rel="noopener"><span>Dashboards Aren’t Dead — They Aren’t Even Sick</span><svg><use href="#i-arrow" /></svg></a></li>
+              </ul>
+            </article>
+            <article class="reading-category reveal">
+              <h3>Data Engineering &amp; Architecture</h3>
+              <p>Practical choices for structuring data, scaling analysis and building maintainable scientific applications.</p>
+              <ul class="reading-list">
+                <li><a href="https://www.forbes.com/councils/forbescommunicationscouncil/2022/04/13/why-your-companys-data-architecture-is-more-important-than-the-data-itself/" target="_blank" rel="noopener"><span>Why Data Architecture Is More Important Than the Data Itself</span><svg><use href="#i-arrow" /></svg></a></li>
+                <li><a href="https://support.bioconductor.org/p/96658/" target="_blank" rel="noopener"><span>Scaling bsseq with HDF5-Backed Data</span><svg><use href="#i-arrow" /></svg></a></li>
+                <li><a href="https://shiny.posit.co/py/docs/comp-streamlit.html" target="_blank" rel="noopener"><span>Shiny for Python vs Streamlit</span><svg><use href="#i-arrow" /></svg></a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           ══════════════════════════════════════════════════════════════════ -->
+      <!-- ══════════════════════════════════════════════════════════════════
+           07 · CONTACT
+           ══════════════════════════════════════════════════════════════════ -->
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <span class="section__num">07</span>
+            <h2 class="section__title">Contact</h2>
+          </div>
+
+          <div class="reveal">
+            <p class="contact__title">Building something in bio? Let’s talk!</p>
+            <p class="contact__lead">
+              If you are exploring a new idea in biology, data or health, or if
+              something in my work made you curious, reach out. I would love to hear
+              what you are working on, trade ideas and build something useful at the
+              frontier together!
+            </p>
+
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="mailto:archanab2400@gmail.com">
+                <svg><use href="#i-mail" /></svg>
+                archanab2400@gmail.com
+              </a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/archanab2400/" target="_blank" rel="noopener">
+                <svg><use href="#i-linkedin" /></svg>
+                LinkedIn
+              </a>
+              <a class="btn btn--ghost" href="https://github.com/[[username]]" target="_blank" rel="noopener">
+                <svg><use href="#i-github" /></svg>
+                GitHub
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="https://scholar.google.com/citations?user=X4-CQkYAAAAJ&amp;hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg><use href="#i-scholar" /></svg>
+                Google Scholar
+              </a>
+              <a
+                class="btn btn--ghost"
+                href="https://orcid.org/0000-0003-0036-0922"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg><use href="#i-orcid" /></svg>
+                ORCID
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <p>© <span id="year">2026</span> Archana Balasubramanian</p>
+      </div>
+    </footer>
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.shell -->
+
+    <script src="content.js"></script>
+    <script src="content-renderer.js"></script>
+    <script src="kp-factorization.js"></script>
+    <script src="lacto-workflow.js"></script>
+    <script src="emp-network.js"></script>
+    <script src="zikv-sirna.js"></script>
+    <script src="ftd-network.js"></script>
+    <script src="lung-spatial.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
