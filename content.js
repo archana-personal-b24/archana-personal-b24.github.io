@@ -111,6 +111,8 @@ window.PORTFOLIO_CONTENT = {
       issuer: "LevelUp Labs", instructors: "Aishwarya Reganti and Kiriti Badam",
       date: "Sep 2026", logo: "assets/logos/levelup.png", monogram: "LU",
       credentialId: "2LALOO-CE001056",
+      description: "A 10-chapter course on evaluating AI systems as products rather than benchmarking models in isolation. It covers building reference datasets, designing evaluation metrics and LLM-as-judge scoring, monitoring systems in production and avoiding common evaluation pitfalls. The certificate is awarded after passing a final assessment. It maps directly onto my work building dataset-grounded chatbots, where answers need to be checked against validated analysis rather than trusted by default.",
+      courseUrl: "https://levelup-labs.ai/free-courses/ai-evals-for-everyone",
       url: "assets/pubs/ai-evals-certificate.pdf"
     }
   ],
