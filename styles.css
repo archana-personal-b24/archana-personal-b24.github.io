@@ -625,6 +625,11 @@ button {
   padding-top: 0;
 }
 
+/* Certifications sit under a subhead rule, so keep the usual top spacing. */
+.entries--certs .entry:first-child {
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
 /*  Institution and company marks are almost always wide wordmarks rather than
     square icons, so the tile is landscape. The background is a fixed white in
     both themes: logos are drawn for light backgrounds, and a navy wordmark on
@@ -1386,7 +1391,8 @@ button {
   border-bottom: 1px solid var(--line);
 }
 
-.subhead:not(:first-of-type) {
+.subhead:not(:first-of-type),
+.subhead--certs {
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
 

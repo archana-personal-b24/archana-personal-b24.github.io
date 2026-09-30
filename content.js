@@ -105,6 +105,16 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
 
+  certifications: [
+    {
+      title: "AI Evals for Everyone",
+      issuer: "LevelUp Labs", instructors: "Aishwarya Reganti and Kiriti Badam",
+      date: "Sep 2026", logo: "assets/logos/levelup.png", monogram: "LU",
+      credentialId: "2LALOO-CE001056",
+      url: "assets/pubs/ai-evals-certificate.pdf"
+    }
+  ],
+
   projects: {
     items: [
       {
@@ -185,6 +195,15 @@ window.PORTFOLIO_CONTENT = {
       {
         heading: "Conference presentations",
         items: [
+          {
+            title: "An end-to-end data platform for environmental metagenomics and targeted pathogen surveillance",
+            authors: "<strong>Balasubramanian A</strong>, Bhasin J, Damerum A, Ullmer W, Yancey R, Jin M, Liu J, Booher K, Jia L",
+            venue: "Microbial Dark Matter Symposium · Laguna Beach, CA",
+            description: "Every wastewater sample goes through four assays in parallel: microfluidic PCR, SARS-CoV-2 tiled amplicon sequencing, hybrid-capture viral sequencing and untargeted shotgun metagenomics. The targeted assays measure known pathogens with high sensitivity, and metagenomics picks up bacteria, fungi, protozoa and viruses that no panel was designed for. I built the platform that stores all four outputs in one database and delivers them through assay-specific dashboards, so public health teams can search by organism, sewershed and collection date and weigh the evidence from each assay side by side.",
+            type: "Poster", flag: "First author", date: "September 2026",
+            links: [{ label: "Poster", url: "assets/pubs/dark-matter-poster.jpg" }, { label: "Event photos", url: "assets/pubs/dark-matter-symposium-photos.jpg" }],
+            image: "assets/pubs/dark-matter-poster-thumb.jpg", imageUrl: "assets/pubs/dark-matter-poster.jpg", imageAlt: "Poster: An end-to-end data platform for environmental metagenomics and targeted pathogen surveillance", imageCaption: "Microbial Dark Matter, 2026"
+          },
           {
             title: "An end-to-end wastewater pathogen surveillance data dashboard platform",
             url: "https://www.wastewateramr.com/",
