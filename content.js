@@ -107,6 +107,13 @@ window.PORTFOLIO_CONTENT = {
 
   certifications: [
     {
+      title: "OpenClaw Mastery for Everyone",
+      issuer: "LevelUp Labs", instructors: "Aishwarya Reganti and Kiriti Badam",
+      date: "Oct 2026", logo: "assets/logos/levelup.png", monogram: "LU",
+      credentialId: "ZQAGV4-CE000215",
+      url: "assets/pubs/openclaw-mastery-certificate.pdf"
+    },
+    {
       title: "AI Evals for Everyone",
       issuer: "LevelUp Labs", instructors: "Aishwarya Reganti and Kiriti Badam",
       date: "Sep 2026", logo: "assets/logos/levelup.png", monogram: "LU",
