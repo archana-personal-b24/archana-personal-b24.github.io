@@ -111,6 +111,8 @@ window.PORTFOLIO_CONTENT = {
       issuer: "LevelUp Labs", instructors: "Aishwarya Reganti and Kiriti Badam",
       date: "Oct 2026", logo: "assets/logos/levelup.png", monogram: "LU",
       credentialId: "ZQAGV4-CE000215",
+      description: "A 10-day hands-on course on building a personal AI assistant with OpenClaw, running 24/7 on a self-hosted server. It covers securing the install, defining the agent's identity and memory files, connecting messaging and email, scheduled automation, custom skills, web research, approval gates for outgoing actions, prompt-injection protection and delegating work to specialist sub-agents. The certificate is awarded after passing a final assessment that includes verification of the working setup.",
+      courseUrl: "https://github.com/aishwaryanr/awesome-generative-ai-guide/tree/main/free_courses/openclaw_mastery_for_everyone",
       url: "assets/pubs/openclaw-mastery-certificate.pdf"
     },
     {
